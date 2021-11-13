@@ -36,6 +36,6 @@ neither WE is low. With both WE high, both UB and LB are low, read is
 For writes: Writes appear to only be 8-bits. For upper/lower byte control:
 
 Upper: If WE0 (lower) is low UB is surpressed
-Lower: IF WE1 (upper) is low CAS
+Lower: IF WE1 (upper) is low LB is surpressed
 
 WE to chip is gated on CAS, same as OE for reads.
