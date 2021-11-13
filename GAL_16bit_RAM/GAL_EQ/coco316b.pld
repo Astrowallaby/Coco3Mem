@@ -1,0 +1,41 @@
+GAL16V8   ; COCO3 SRAM Controller
+COCO316B  ; 16 BIT SRAM version
+
+
+Clock RAS   Z0    CAS   WE1   WE0  NC  NC  NC      GND
+/OE   NC    OEN   WE    LB    UB   CE  A0  RASCLK  VCC
+
+
+RASCLK = /RAS
+
+A0.R = Z0
+
+/CE = /RAS
+
+/UB = /RAS * WE0
+
+/LB = /RAS * WE1
+
+/WE = /CAS * /WE0
+    + /CAS * /WE1
+
+/OEN = /CAS * WE0 * WE1 
+
+
+DESCRIPTION
+
+This is a simple circuit to convert a Coco3 from DRAM
+to a 16 bit wide SRAM with upper/lower byte signals.
+
+For both reads and writes, CE gates on RAS.
+
+For reads, OEN, which is connected to SRAM OE, is low during CAS when
+neither WE is low. With both WE high, both UB and LB are low, read is
+16 bits.
+
+For writes: Writes appear to only be 8-bits. For upper/lower byte control:
+
+Upper: If WE0 (lower) is low UB is surpressed
+Lower: IF WE1 (upper) is low CAS
+
+WE to chip is gated on CAS, same as OE for reads.
