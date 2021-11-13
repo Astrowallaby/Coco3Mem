@@ -457,10 +457,6 @@ Wire Wire Line
 Text Label 7100 2800 0    70   ~ 0
 A8
 Wire Wire Line
-	8400 4200 8200 4200
-Wire Wire Line
-	8200 4200 8200 4400
-Wire Wire Line
 	8200 4700 8400 4700
 Wire Wire Line
 	9600 2000 10000 2000
@@ -678,7 +674,6 @@ Wire Wire Line
 	5250 4550 5250 5100
 Wire Wire Line
 	5600 4400 8200 4400
-Connection ~ 8200 4400
 Wire Wire Line
 	8200 4400 8200 4700
 Connection ~ 5450 4550
@@ -784,9 +779,6 @@ Wire Wire Line
 	5100 6250 6250 6250
 Wire Wire Line
 	6250 6250 6250 5800
-Wire Wire Line
-	6250 5700 6250 5800
-Connection ~ 6250 5800
 Wire Wire Line
 	9000 1700 8900 1700
 Wire Wire Line
@@ -958,6 +950,12 @@ F 3 "" H 4400 6200 50  0001 C CNN
 	1    4400 6200
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8400 4200 7600 4200
+Wire Wire Line
+	7600 4200 7600 5700
+Wire Wire Line
+	7600 5700 6250 5700
 Wire Bus Line
 	6200 1700 7000 1700
 Wire Bus Line
@@ -974,4 +972,6 @@ Wire Bus Line
 	7000 1700 7000 3500
 Wire Bus Line
 	10100 1700 10100 3500
+Text Label 6250 5700 0    50   ~ 0
+OE*
 $EndSCHEMATC
