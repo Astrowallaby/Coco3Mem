@@ -1,0 +1,25 @@
+
+
+ Pin # | Name     | Pin Type
+-----------------------------
+   1   | Clock    | Clock
+   2   | RAS      | Input
+   3   | Z0       | Input
+   4   | CAS      | Input
+   5   | WE1      | Input
+   6   | WE0      | Input
+   7   | NC       | Input
+   8   | NC       | Input
+   9   | NC       | Input
+  10   | GND      | GND
+  11   | /OE      | /OE
+  12   | NC       | NC
+  13   | OEN      | Output
+  14   | WE       | Output
+  15   | LB       | Output
+  16   | UB       | Output
+  17   | CE       | Output
+  18   | A0       | Output
+  19   | RASCLK   | Output
+  20   | VCC      | VCC
+
