@@ -1,0 +1,28 @@
+GAL16V8   ; COCO3 SRAM Controller
+COCO316B  ; 16 BIT SRAM version
+
+
+Clock RAS   Z0    CAS  WE1    WE0  NC  NC  NC      GND
+/OE   NC    NC    UOE  UCE    LOE  LCE A0  RASCLK  VCC
+
+
+RASCLK = /RAS
+
+A0.R = Z0
+
+UOE = /WE1
+LOE = /WE0
+
+UCE = CAS
+LCE = CAS 
+
+
+DESCRIPTION
+
+This is a simple circuit to convert a Coco3 from DRAM
+To SRAM, assuming a pair of 8 bit SRAMs of adequate size
+
+For both reads and writes, CE gates on CAS. This should
+comply with the "CE Controlled" waveform in the AS6C4008
+datasheet. OE is inverted WE for each bank.
+

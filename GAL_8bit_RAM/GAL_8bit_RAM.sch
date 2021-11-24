@@ -437,10 +437,6 @@ Text GLabel 4650 5500 0    70   BiDi ~ 0
 WE1*
 Text GLabel 4650 5650 0    70   BiDi ~ 0
 WE0*
-Text Label 6250 5400 0    47   ~ 0
-UB*
-Text Label 6250 5500 0    47   ~ 0
-LB*
 Entry Wire Line
 	4700 2350 4800 2450
 Entry Wire Line
@@ -592,8 +588,6 @@ Wire Wire Line
 	6250 5200 6850 5200
 Wire Wire Line
 	6850 5200 6850 1800
-Text Label 6250 5300 0    50   ~ 0
-CE*
 Wire Wire Line
 	6600 2450 6900 2450
 Wire Wire Line
@@ -613,8 +607,6 @@ Wire Wire Line
 Connection ~ 5600 3750
 Wire Wire Line
 	5600 3750 5600 4400
-Text Label 6250 5600 0    50   ~ 0
-WE*
 Wire Wire Line
 	5250 5700 5100 5700
 Wire Wire Line
@@ -779,8 +771,6 @@ F 3 "" H 4400 6200 50  0001 C CNN
 	1    4400 6200
 	1    0    0    -1  
 $EndComp
-Text Label 6250 5700 0    50   ~ 0
-OE*
 Wire Wire Line
 	5250 6000 5250 6350
 Wire Wire Line
@@ -1140,41 +1130,6 @@ RAM_PULL
 Text Label 8350 6650 2    50   ~ 0
 RAM_PULL
 Wire Wire Line
-	6250 5400 7250 5400
-Wire Wire Line
-	7250 5400 7250 4300
-Wire Wire Line
-	7250 4300 9550 4300
-Wire Wire Line
-	9550 4300 9550 2600
-Wire Wire Line
-	9550 2600 9300 2600
-Wire Wire Line
-	9350 5850 9750 5850
-Wire Wire Line
-	9750 5850 9750 7350
-Wire Wire Line
-	9750 7350 7050 7350
-Wire Wire Line
-	7050 7350 7050 5500
-Wire Wire Line
-	7050 5500 6250 5500
-Wire Wire Line
-	6250 5600 7350 5600
-Wire Wire Line
-	7350 5600 7350 3900
-Wire Wire Line
-	7350 3900 9300 3900
-Wire Wire Line
-	9300 3900 9300 2800
-Wire Wire Line
-	9300 3900 10200 3900
-Wire Wire Line
-	10200 3900 10200 6050
-Wire Wire Line
-	10200 6050 9350 6050
-Connection ~ 9300 3900
-Wire Wire Line
 	9350 4850 9750 4850
 Wire Wire Line
 	9350 4950 9750 4950
@@ -1191,24 +1146,7 @@ Wire Wire Line
 Wire Wire Line
 	9350 5550 9750 5550
 Wire Wire Line
-	6250 5700 7150 5700
-Wire Wire Line
-	7150 5700 7150 4100
-Wire Wire Line
 	7150 4100 7450 4100
-Wire Wire Line
-	9400 4100 9400 2700
-Wire Wire Line
-	9400 2700 9300 2700
-Wire Wire Line
-	7450 4100 9400 4100
-Wire Wire Line
-	9400 2700 10300 2700
-Wire Wire Line
-	10300 2700 10300 5950
-Wire Wire Line
-	10300 5950 9350 5950
-Connection ~ 9400 2700
 $Comp
 L power:VCC #PWR0109
 U 1 1 61C87FF1
@@ -1237,10 +1175,18 @@ F 3 "" H 5600 4400 50  0001 C CNN
 	1    5600 4400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6250 5300
 Wire Wire Line
 	5100 6000 5100 6400
 NoConn ~ 6250 5800
+Text Label 6250 5300 0    50   ~ 0
+LCE*
+Text Label 6250 5400 0    50   ~ 0
+LOE*
+Text Label 6250 5500 0    50   ~ 0
+UCE*
+Text Label 6250 5600 0    50   ~ 0
+UOE*
+NoConn ~ 6250 5700
 Wire Bus Line
 	6550 1700 7000 1700
 Wire Bus Line
@@ -1263,4 +1209,16 @@ Wire Bus Line
 	2100 3900 2100 7400
 Wire Bus Line
 	9850 1500 9850 5800
+Text GLabel 9300 2800 2    50   Input ~ 0
+WE0*
+Text GLabel 9350 6050 2    50   Input ~ 0
+WE1*
+Text Label 9350 5850 0    50   ~ 0
+UCE*
+Text Label 9350 5950 0    50   ~ 0
+UOE*
+Text Label 9300 2600 0    50   ~ 0
+LCE*
+Text Label 9300 2700 0    50   ~ 0
+LOE*
 $EndSCHEMATC
